@@ -29,16 +29,14 @@
       <i class="fa-sharp fa-solid fa-user"></i>
       <a href="#">Felix</a>
     </div>
-    <div class="navbar__menu">
       <ul class="navbar__menu">
-        <li class="navbar__menu__item">Home</li>
-        <li class="navbar__menu__item">About</li>
-        <li class="navbar__menu__item">Skills</li>
-        <li class="navbar__menu__item">My work</li>
-        <li class="navbar__menu__item">Quotes</li>
-        <li class="navbar__menu__item">Contact</li>
+        <li class="navbar__menu__item" data-link="#home">Home</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#work">My work</li>
+        <li class="navbar__menu__item" data-link="#quotes">Quotes</li>
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
       </ul>
-    </div>
 
     <!-- Toggle button -->
     <button class="navbar__toggle-btn">
@@ -47,10 +45,12 @@
   </nav>
   <!-- Home -->
   <section id="home">
-    <img src="imgs/My2.jpg" alt="Felix'photo" class="home__avatar">
-    <h1 class="home__title">Hello <br> I'm Felix</h1>
-    <h2 class="home__description">Novice front-end developer in Busan.</h2>
-    <button class="home__contact">Contact Me!</button>
+    <div class="home__container">
+      <img src="imgs/My2.jpg" alt="Felix'photo" class="home__avatar">
+      <h1 class="home__title">Hello <br> I'm Felix</h1>
+      <h2 class="home__description">Novice front-end developer in Busan.</h2>
+      <button class="home__contact">Contact Me!</button>
+    </div>
   </section>
   
   <!-- About -->
@@ -192,14 +192,14 @@
       <h1 class="work__title">My work</h1>
       <h3 class="work__subtitle">Projects</h3>
       <div class="work__categories">
-        <button class="category__btn active">All <span class="category__coutn">1</span></button>
-        <button class="category__btn">Front-end <span class="category__coutn">1</span></button>
-        <button class="category__btn">Back-end <span class="category__coutn">0</span></button>
-        <button class="category__btn">Mobile <span class="category__coutn">0</span></button>
+        <button class="category__btn selected" data-filter="*">All <span class="category__coutn">1</span></button>
+        <button class="category__btn" data-filter="front-end">Front-end <span class="category__coutn">1</span></button>
+        <button class="category__btn" data-filter="back-end">Back-end <span class="category__coutn">0</span></button>
+        <button class="category__btn" data-filter="mobile">Mobile <span class="category__coutn">0</span></button>
       </div>
       
       <div class="work_projects">
-        <a href="" class="project" target="_blank">
+        <a href="" class="project" target="_blank" data-type="front-end">
         <img src="/project/html-css_first.png" alt="" class="project__img">
         <div class="project__description">
           <h3>HTML-CSS</h3>
@@ -253,5 +253,10 @@
       <i class="fa-solid fa-phone"></i> 010 - 4950 - 8633
     </p>
   </section>
+
+  <!-- arrow up -->
+  <button class="arrow-up">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 </body>
 </html>
