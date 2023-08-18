@@ -159,7 +159,7 @@ p {
 
 /* Home */
 #home {
-  background: url(./imgs/background.png);
+  background-image: url(./imgs/background.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
